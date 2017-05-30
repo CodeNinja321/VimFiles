@@ -27,7 +27,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
+Plugin 'gerw/vim-latex-suite'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,8 +78,13 @@ nnoremap <leader>g :YcmCompleter GoToDefinition<CR>
 
 map <C-n> :NERDTreeTabsToggle<CR>
 
+"Vim-LaTeX settings
 
+filetype plugin on
+set grepprg=grep\ -nH\ $*
 
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats='pdf, aux'
 
 
 
